@@ -36,3 +36,30 @@ Archive:  terraform_xxx_linux_amd64.zip
  ```shell
 terraform version
 ```
+
+- **Hands on Terraform commands**
+> Create a new workspace
+
+ ```shell
+terraform workspace new production
+```
+> Verify in which environment you are running
+
+ ```shell
+terraform workpace list
+```
+>  Create an execution plan
+
+ ```shell
+terraform plan
+```
+>  Apply the changes required to reach the desired state of the configuration
+
+ ```shell
+terraform apply
+```
+> Destroy the Terraform-managed infrastructure
+
+ ```shell
+terraform destroy
+```
