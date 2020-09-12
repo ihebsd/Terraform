@@ -13,7 +13,7 @@
 > Install wget
 
 ```shell
-sudo dnf -y install wget
+$ sudo dnf -y install wget
 ```
 > Install Terraform
 
@@ -24,42 +24,42 @@ wget https://releases.hashicorp.com/terraform/${TER_VER}/terraform_${TER_VER}_li
 > Extract the downloaded archive
 
 ```shell
-unzip terraform_${TER_VER}_linux_amd64.zip
+$ unzip terraform_${TER_VER}_linux_amd64.zip
 Archive:  terraform_xxx_linux_amd64.zip
  inflating: terraform
  ```
  > Move the binary file to directory in your PATH.
  ```shell
- sudo mv terraform /usr/local/bin/
+ $ sudo mv terraform /usr/local/bin/
  ```
 > Confirm Terraform Installation
  ```shell
-terraform version
+$ terraform version
 ```
 
 - **Hands on Terraform commands**
 > Create a new workspace
 
  ```shell
-terraform workspace new production
+$ terraform workspace new production
 ```
 > Verify in which environment you are running
 
  ```shell
-terraform workpace list
+$ terraform workpace list
 ```
 >  Create an execution plan
 
  ```shell
-terraform plan
+$ terraform plan
 ```
 >  Apply the changes required to reach the desired state of the configuration
 
  ```shell
-terraform apply
+$ terraform apply
 ```
 > Destroy the Terraform-managed infrastructure
 
  ```shell
-terraform destroy
+$ terraform destroy
 ```
