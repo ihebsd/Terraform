@@ -18,7 +18,6 @@ output "env_suffix"{
 value = "${local.env}"
 }
 
-
 locals {
 env = "${terraform.workspace}"
 
@@ -54,6 +53,18 @@ production = "subnet-********"
 privatesubnetid = "${lookup(local.privatesubnetid_env, local.env)}"
 }
 
+amiid_env{
+default = "ami-*********"
+staging= "ami-********"
+production = "ami-********"
+}
+amiid = "${lookup(local.amiid_env, local.env)}"
+}
 
-
+instancetype_env{
+default = "t2_micro"
+staging= "t2-micro"
+production = "t2-medium"
+}
+instancetype = "${lookup(local.instancetype_env, local.env)}"
 }
